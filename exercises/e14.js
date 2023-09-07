@@ -7,7 +7,6 @@
 
 export function getClientsWithWrongBalance(array) {
   const wrongBalance = [];
-
   for (let i = 0; i < array.length; i ++) {
     let sumDeposits = 0;
     let sumWithdrawals = 0;
@@ -21,11 +20,11 @@ export function getClientsWithWrongBalance(array) {
         sumWithdrawals += array[i].withdrawals[k];
       }
     }
-    if (sumDeposits - sumWithdrawals != array[i].balance) {
+    if (sumDeposits - sumWithdrawals !== array[i].balance) {
       wrongBalance.push(array[i]);
     }
   }
-return wrongBalance;
+  return wrongBalance;
 }
 
 

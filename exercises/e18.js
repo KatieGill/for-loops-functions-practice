@@ -6,9 +6,8 @@
 
 export function joinToString(array, separator) {
   let newString = ("");
-
   for (let i = 0; i < array.length; i ++) {
-    if (array[i] != array[array.length-1]) {
+    if (array[i] !== array[array.length-1]) {
       newString += array[i] + separator;
     }
     if (array[i] === array[array.length-1]) {

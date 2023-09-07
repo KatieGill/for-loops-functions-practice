@@ -9,11 +9,9 @@ export function separateNamesWithAFromRest(array) {
   const allNames = [];
   const aNames = [];
   const notANames = [];
-  
   for (let i = 0; i < array.length; i ++) {
     let aPresent;
     let aNotPresent;
-
     for (let j in array[i]) {
       if (array[i][j] === 'a') {
         aPresent = array[i];
@@ -22,7 +20,6 @@ export function separateNamesWithAFromRest(array) {
         aNotPresent = array[i];
       }
     }
-
     if (aPresent === aNotPresent) {
       aNames.push(array[i]);
     }
@@ -30,11 +27,9 @@ export function separateNamesWithAFromRest(array) {
       notANames.push(array[i]);
     }
   }
-
   allNames.push(aNames);
   allNames.push(notANames);
- 
-return allNames;
+  return allNames;
 }
 
 

@@ -12,7 +12,7 @@ export function doesArrayInclude(array, value) {
       includes = true;
     }
   }
-return includes;
+  return includes;
 }
 
 

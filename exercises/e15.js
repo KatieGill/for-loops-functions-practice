@@ -6,15 +6,12 @@
 
 export function concatArrays(arr1, arr2) {
   const newArray = [];
-
   for (let i = 0; i < arr1.length; i ++) {
     newArray.push(arr1[i]);
   }
-
   for (let j = 0; j < arr2.length; j ++) {
     newArray.push(arr2[j]);
   }
-
   return newArray;
 }
 

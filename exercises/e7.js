@@ -7,21 +7,18 @@
 export function getClientWithLeastPositiveBalance(array) {
   let minBalance = 0;
   let minBalanceAccount = [];
-
   for (let i = 0; i < array.length; i ++) {
-    if (array[i].balance > 0 && array[i].balance > minBalance) {
+    if (array[i].balance > minBalance) {
       minBalance = array[i].balance;
     }
   }
-
   for (let i = 0; i < array.length; i ++) {
     if (array[i].balance < minBalance && array[i].balance > 0) {
       minBalance = array[i].balance;
     }
   }
-
   for (let i = 0; i < array.length; i ++) {
-    if (array[i].balance == minBalance && array[i].balance !== 0) {
+    if (array[i].balance === minBalance && array[i].balance !== 0) {
       minBalanceAccount.push(array[i]);
     }
   }

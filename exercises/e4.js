@@ -4,13 +4,23 @@
 // findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]) => 46
 
 export function findMinValueInArray(array) {
-  array.sort(function(a, b){return a - b});
-  return array[0];
+  let value = Number.MAX_VALUE;
+  for (let i = 0; i < array.length; i ++) {
+    if (array[i] < value) {
+      value = array[i];
+    }
+  }
+  return value;
 }
 
 export function findMaxValueInArray(array) {
-  array.sort(function(a, b){return a - b});
-  return array[array.length-1];
+  let value = 0;
+  for (let i = 0; i < array.length; i ++) {
+    if (array[i] > value) {
+      value = array[i];
+    }
+  }
+  return value;
 }
 
 // === TEST YOURSELF ===
