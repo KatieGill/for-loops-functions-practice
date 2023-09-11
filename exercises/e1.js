@@ -5,7 +5,7 @@
 
 export function getFirstTenNumbers() {
   const firstTenNumbers = [];
-  for (let i = 1; i < 11; i ++) {
+  for (let i = 1; i <= 10; i ++) {
     firstTenNumbers.push(i);
   }
   return firstTenNumbers;

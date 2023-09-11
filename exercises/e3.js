@@ -25,15 +25,18 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  let arr = str.split("");
   let sum = 0;
-  for (let i = 0; i < arr.length; i ++) {
-      if (+arr[i]) {
-      sum += +arr[i];
+  for (let characters of str) {
+    for (let i = 0; i < characters.length; i ++) {
+      if (+characters[i]) {
+        sum += Number(characters[i]);;
+      }
     }
   }
   return sum;
-}
+  }
+  
+
 
 
 // === TEST YOURSELF ===
